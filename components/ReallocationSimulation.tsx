@@ -40,25 +40,25 @@ const ReallocationSimulation: React.FC<ReallocationSimulationProps> = ({ realloc
     }
 
     return (
-        <div className="bg-white p-10 rounded-xl border border-gray-200 shadow-sm">
-            <div className="mb-10 text-center">
-                <h2 className="text-xl font-bold text-primary mb-2">
+        <div className="bg-white p-6 sm:p-10 rounded-xl border border-gray-200 shadow-sm transition-all duration-300">
+            <div className="mb-8 sm:mb-10 text-center">
+                <h2 className="text-lg sm:text-xl font-bold text-primary mb-2">
                     Reallocation Simulation
                 </h2>
-                <p className="text-sm text-gray-400 font-normal">
+                <p className="text-[10px] sm:text-sm text-gray-400 font-normal">
                     Equivalent spending examples for ₹{formatCurrency(budgetData.ladkiBahinAllocation)} Cr
                 </p>
             </div>
 
-            <div className="flex justify-center mb-12">
-                <div className="bg-gray-50 p-1 rounded-xl border border-gray-200 flex gap-2">
+            <div className="flex justify-center mb-10 sm:mb-12">
+                <div className="bg-gray-50 p-1 rounded-xl border border-gray-200 flex flex-wrap justify-center gap-1 sm:gap-2">
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setCategory(cat.id)}
-                            className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center gap-2 ${category === cat.id
-                                ? 'bg-white text-primary shadow-sm ring-1 ring-gray-200'
-                                : 'text-gray-400 hover:text-gray-600'
+                            className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-[10px] sm:text-sm font-bold transition-all flex items-center gap-2 ${category === cat.id
+                                    ? 'bg-white text-primary shadow-sm ring-1 ring-gray-200'
+                                    : 'text-gray-400 hover:text-gray-600'
                                 }`}
                         >
                             <span>{cat.icon}</span>
@@ -68,20 +68,20 @@ const ReallocationSimulation: React.FC<ReallocationSimulationProps> = ({ realloc
                 </div>
             </div>
 
-            <div className="max-w-2xl mx-auto bg-blue-50/50 border border-blue-100 rounded-2xl p-12 text-center">
+            <div className="max-w-2xl mx-auto bg-blue-50/50 border border-blue-100 rounded-2xl p-8 sm:p-12 text-center">
                 <div className="mb-4">
-                    <span className="text-5xl font-black text-primary tracking-tight">
+                    <span className="text-4xl sm:text-5xl font-black text-primary tracking-tight">
                         {unitValue.toLocaleString()}
                     </span>
-                    <span className="text-lg font-bold text-primary ml-3 uppercase tracking-widest opacity-60">
+                    <span className="text-base sm:text-lg font-bold text-primary ml-2 sm:ml-3 uppercase tracking-widest opacity-60">
                         {unitLabel}
                     </span>
                 </div>
-                <p className="text-sm text-blue-900/70 font-medium mb-8">
+                <p className="text-[11px] sm:text-sm text-blue-900/70 font-medium mb-6 sm:mb-8">
                     {currentImpact.description}
                 </p>
-                <div className="pt-8 border-t border-blue-100">
-                    <p className="text-[10px] text-blue-800/50 uppercase tracking-[0.2em] font-bold">
+                <div className="pt-6 sm:pt-8 border-t border-blue-100">
+                    <p className="text-[9px] sm:text-[10px] text-blue-800/50 uppercase tracking-[0.2em] font-bold">
                         Institutional Equivalence Projection
                     </p>
                 </div>

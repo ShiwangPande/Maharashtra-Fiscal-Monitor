@@ -18,7 +18,7 @@ const ScenarioAnalysis: React.FC<ScenarioAnalysisProps> = ({ mode, metrics }) =>
     const isSimple = mode === 'simple';
 
     return (
-        <div className="bg-white p-10 rounded-xl border border-gray-200 shadow-sm mt-16">
+        <div className="bg-white p-6 sm:p-10 rounded-xl border border-gray-200 shadow-sm mt-12 sm:mt-16 transition-all duration-300">
             <div className="mb-12">
                 <h2 className="text-xl font-bold text-primary mb-2">
                     Scenario Analysis: If Scheme Is Discontinued

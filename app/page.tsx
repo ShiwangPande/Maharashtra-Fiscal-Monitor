@@ -28,34 +28,36 @@ export default function Home() {
     <main className="min-h-screen bg-white pb-32">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-8 relative">
-        {/* Data Source Badge */}
-        <div className="absolute top-12 right-8 flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
-          <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">
-            Source: MH Budget 2025-26 (PRS)
-          </span>
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 relative">
+        {/* Data Source Badge - Repositioned for Mobile */}
+        <div className="flex justify-center sm:block">
+          <div className="mt-8 sm:mt-0 sm:absolute sm:top-12 sm:right-8 flex items-center gap-2 bg-gray-50 border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
+            <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+            <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none">
+              Source: MH Budget 2025-26 (PRS)
+            </span>
+          </div>
         </div>
         {/* Mode Switcher */}
-        <div className="flex justify-center mt-12">
-          <div className="bg-white p-1 rounded-full border border-gray-300 shadow-sm flex items-center">
+        <div className="flex justify-center mt-8 sm:mt-12">
+          <div className="bg-white p-1 rounded-full border border-gray-300 shadow-sm flex items-center w-full max-w-[320px] sm:w-auto">
             <button
               onClick={() => setMode('analyst')}
-              className={`px-8 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${mode === 'analyst' ? 'bg-primary text-white shadow-md' : 'text-gray-400 hover:text-primary'}`}
+              className={`flex-1 sm:flex-none px-4 sm:px-8 py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest transition-all ${mode === 'analyst' ? 'bg-primary text-white shadow-md' : 'text-gray-400 hover:text-primary'}`}
             >
-              Analyst Mode
+              Analyst
             </button>
             <button
               onClick={() => setMode('simple')}
-              className={`px-8 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-all ${mode === 'simple' ? 'bg-primary text-white shadow-md' : 'text-gray-400 hover:text-primary'}`}
+              className={`flex-1 sm:flex-none px-4 sm:px-8 py-2 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest transition-all ${mode === 'simple' ? 'bg-primary text-white shadow-md' : 'text-gray-400 hover:text-primary'}`}
             >
-              Simple Mode
+              Simple
             </button>
           </div>
         </div>
 
         {/* Section 1: Key Statistics */}
-        <section className="py-24">
+        <section className="py-12 sm:py-24">
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">
             {isSimple ? "Government Ki Kamai aur Kharcha (₹ Cr)" : "Key Expenditure & Revenue (₹ Cr)"}
           </h2>
@@ -81,8 +83,8 @@ export default function Home() {
 
       {/* Alternative Background for Health Overview */}
       <div className="bg-[#f8fafc] border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-8">
-          <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <section className="py-12 sm:py-24">
             <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">
               {isSimple ? "Sarkar par loan kitna hai?" : "Fiscal Health Overview"}
             </h2>
@@ -114,7 +116,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
 
         {/* Simple Mode Exclusive: Money Distribution */}
         {isSimple && (
@@ -133,7 +135,7 @@ export default function Home() {
         )}
 
         {/* Section 3: Fiscal Burden Indicators */}
-        <section className="py-24">
+        <section className="py-12 sm:py-24">
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12 text-center">
             {isSimple ? "Scheme ka sarkari tijori par asar" : "Scheme Fiscal Burden Analysis"}
           </h2>
@@ -164,9 +166,9 @@ export default function Home() {
       </div>
 
       <div className="bg-[#f8fafc] border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
           {/* New Section 4: Beneficiary Metrics */}
-          <section className="py-24">
+          <section className="py-12 sm:py-24">
             <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">
               {isSimple ? "Citizen par kitna bojh?" : "Beneficiary Metrics & Cost Analysis"}
             </h2>
@@ -191,11 +193,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
 
         {/* Section 5: Visual Analytics & Deep Dives */}
         {!isSimple && (
-          <section className="py-24">
+          <section className="py-12 sm:py-24">
             <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12">
               Deep-Dive Visual Analytics
             </h2>
@@ -227,24 +229,24 @@ export default function Home() {
 
       {/* Scenario Analysis with darker background */}
       <div className="bg-[#f1f5f9] border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-8">
-          <section className="py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8">
+          <section className="py-12 sm:py-24">
             <ScenarioAnalysis mode={mode} metrics={metrics} />
           </section>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Section 7: Reallocation Simulation */}
-        <section className="py-24">
+        <section className="py-12 sm:py-24">
           <ReallocationSimulation reallocationImpact={metrics.reallocationImpact} />
         </section>
       </div>
 
       <Disclaimer />
 
-      <footer className="max-w-7xl mx-auto px-8 mt-12 py-12 border-t border-gray-200">
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-xs uppercase tracking-widest font-semibold gap-6">
+      <footer className="max-w-7xl mx-auto px-4 sm:px-8 mt-12 py-12 border-t border-gray-200">
+        <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-[10px] sm:text-xs uppercase tracking-widest font-semibold gap-6 text-center md:text-left">
           <p>
             &copy; 2026 Maharashtra Fiscal Monitor
           </p>

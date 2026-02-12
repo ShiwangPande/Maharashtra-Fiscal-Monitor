@@ -25,7 +25,7 @@ const FiscalChart: React.FC = () => {
     };
 
     return (
-        <div className="bg-white p-10 rounded-xl border border-gray-300 shadow-sm h-[500px]">
+        <div className="bg-white p-6 sm:p-10 rounded-xl border border-gray-300 shadow-sm h-[450px] sm:h-[500px] transition-all duration-300">
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-10">
                 Fiscal Comparison (₹ Cr)
             </h3>

@@ -23,7 +23,7 @@ const COLORS = [
 
 const MoneySourceChart: React.FC<MoneySourceChartProps> = ({ data }) => {
     return (
-        <div className="bg-white p-10 rounded-xl border border-gray-300 shadow-sm h-[500px]">
+        <div className="bg-white p-6 sm:p-10 rounded-xl border border-gray-300 shadow-sm h-[480px] sm:h-[500px] transition-all duration-300">
             <h3 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-10 text-center">
                 Where Does the Money Come From?
             </h3>
