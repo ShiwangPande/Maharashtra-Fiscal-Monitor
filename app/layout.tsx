@@ -10,6 +10,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Maharashtra Fiscal Monitor",
   description: "Public Policy & Fiscal Transparency Dashboard",
+  icons: {
+    icon: "/icon.png",
+  },  
 };
 
 export default function RootLayout({
