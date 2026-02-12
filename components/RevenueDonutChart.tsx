@@ -11,7 +11,15 @@ import {
 } from 'recharts';
 import { revenueBreakdown } from '@/lib/data';
 
-const COLORS = ['#0b1c3d', '#f47c20', '#64748b', '#94a3b8', '#cbd5e1', '#1e293b'];
+// High-contrast professional palette
+const COLORS = [
+    '#0b1c3d', // State GST (Navy)
+    '#f47c20', // State Excise (Orange)
+    '#166534', // Stamp Duty (Forest Green)
+    '#f59e0b', // Central Transfers (Amber)
+    '#4f46e5', // Non-Tax Revenue (Indigo)
+    '#64748b', // Other Taxes (Slate)
+];
 
 const RevenueDonutChart: React.FC = () => {
     return (

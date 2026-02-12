@@ -14,7 +14,12 @@ interface MoneySourceChartProps {
     data: Array<{ name: string; value: number }>;
 }
 
-const COLORS = ['#0b1c3d', '#f47c20', '#64748b', '#94a3b8'];
+const COLORS = [
+    '#0b1c3d', // State Taxes (Navy)
+    '#f59e0b', // Central Funds (Amber)
+    '#059669', // Non-Tax Revenue (Emerald)
+    '#4f46e5', // Borrowing Needed (Indigo)
+];
 
 const MoneySourceChart: React.FC<MoneySourceChartProps> = ({ data }) => {
     return (
